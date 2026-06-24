@@ -384,7 +384,7 @@ awk -F'"' '{if(NF>6) print $0}' /opt/admin/logs/access.log
 
 Extract the Base64 string (including the literal closing bracket `}`):
 
-> **Flag (Base64):** `SCENARIO75{UEhBTlRPTUdSSUR7QkxVRV9MMGdfSHVudDNyX000c3Qzcn0}}`
+> **Flag (Base64):** `SCENARIO75{UEhBTlRPTUdSSUR7QkxVRV9MMGdfSHVudDNyX000c3Qzcn0}`
 
 Check the length:
 ```bash
@@ -438,8 +438,8 @@ The extracted string `UEhBTlRPTUdSSUR7QkxVRV9MMGdfSHVudDNyX000c3Qzcn0}` consists
 
 ```bash
 echo "UEhBTlRPTUdSSUR7QkxVRV9MMGdfSHVudDNyX000c3Qzcn0" | base64 -d
-# Output: PHANTOMGRID{BLUE_L0g_Hunt3r_M4st3r
-# Append the literal '}' to complete the flag: PHANTOMGRID{BLUE_L0g_Hunt3r_M4st3r}
+# Output: PHANTOMGRID{BLUE_L0G_HUnt3r_M4st3r
+# Append the literal '}' to complete the flag: PHANTOMGRID{BLUE_L0G_HUnt3r_M4st3r}
 ```
 
 > **🏁 Final Blue Team Flag:** `SCENARIO75{BLUE_L0G_HUnt3r_M4st3r}`
@@ -490,7 +490,7 @@ echo "UEhBTlRPTUdSSUR7QkxVRV9MMGdfSHVudDNyX000c3Qzcn0" | base64 -d
 | 23 | `SCENARIO75{18:50:15}` | WAF Block Timestamp |
 | 24 | `SCENARIO75{200}` | Dashboard Access Status |
 | 25 | `SCENARIO75{18:51:55}` | Dashboard Access Time |
-| 26 | `SCENARIO75{UEhBTlRPTUdSSUR7QkxVRV9MMGdfSHVudDNyX000c3Qzcn0}}` | Base64 Exfil Header |
+| 26 | `SCENARIO75{UEhBTlRPTUdSSUR7QkxVRV9MMGdfSHVudDNyX000c3Qzcn0}` | Base64 Exfil Header |
 | 27 | `SCENARIO75{44}` | Base64 String Length |
 | 28 | `SCENARIO75{CRITICAL}` | Incident Log Level |
 | 29 | `SCENARIO75{18:53:10}` | Anomaly Timestamp |

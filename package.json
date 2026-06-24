@@ -1,0 +1,15 @@
+{
+  "name": "ctf-admin-feedback-system",
+  "version": "1.0.0",
+  "description": "CTF Cyber Range - Cookies Reuse & MFA Bypass (Admin Feedback System)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cookie-parser": "^1.4.6",
+    "puppeteer-core": "^21.11.0"
+  }
+}

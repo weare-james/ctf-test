@@ -1,0 +1,43 @@
+# ============================================================
+# CTF Cyber Range - Docker Compose
+# Admin Feedback System (Cookie Reuse & MFA Bypass)
+# ============================================================
+# Usage:
+#   docker-compose up -d --build
+#   docker-compose logs -f
+#   docker-compose down
+# ============================================================
+
+version: '3.8'
+
+services:
+  ctf-feedback-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ctf-feedback-system
+    hostname: feedback.admin.local
+    ports:
+      # HTTP - Vulnerable Web Application (Red Team)
+      - "3075:3075"
+      # SSH - Forensics Terminal (Blue Team)
+      - "2275:2275"
+    environment:
+      - NODE_ENV=production
+      - CTF_ZONE=feedback.admin.local
+    restart: unless-stopped
+    networks:
+      - ctf-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3075/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+networks:
+  ctf-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16

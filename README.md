@@ -3,7 +3,6 @@
 ## Admin Feedback System | Red vs. Blue Team CTF Lab
 
 > **Zone:** `feedback.admin.local`  
-> **Difficulty:** Intermediate  
 > **Flag Format:** `SCENARIO75{...}`
 
 ---

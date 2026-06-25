@@ -45,7 +45,7 @@ The environment provides:
 
 ```bash
 # Clone/navigate to project directory
-cd ctf_test
+cd ctf-test
 
 # Build and start the container
 docker-compose up -d --build

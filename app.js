@@ -8,7 +8,6 @@
 
 const express = require('express');
 const cookieParser = require('cookie-parser');
-const path = require('path');
 const { visitFeedbackAsAdmin } = require('./bot');
 
 const app = express();
@@ -19,9 +18,6 @@ const PORT = 3075;
 // ============================================================
 const feedbacks = [];
 const capturedCookies = [];
-
-// Admin session cookie value (prefix: adm_sess)
-const ADMIN_SESSION_VALUE = 'adm_sess_7f3c2a1b9e4d5678a0c1';
 
 // ============================================================
 // Middleware

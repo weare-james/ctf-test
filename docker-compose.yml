@@ -8,8 +8,6 @@
 #   docker-compose down
 # ============================================================
 
-version: '3.8'
-
 services:
   ctf-feedback-app:
     build:
